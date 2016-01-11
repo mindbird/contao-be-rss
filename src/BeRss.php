@@ -24,12 +24,16 @@ class BeRss extends \Backend
             return '';
         }
 
-        $items = $feed->get_items();
+        $items = $feed->get_items(0,2);
         $output = '';
 
         if ($items) {
             foreach ($items as $item) {
-                var_dump($item);
+                print 'Title: ' . $item['titel'] . '<br>';
+                print 'Link: ' . $item['link'] . '<br>';
+                print 'Description: ' . $item['description'] . '<br>';
+                print 'Image: ' . print_r($item['titel'], true) . '<br>';
+
                 $template = new \BackendTemplate('be_rss_item');
             }
         }

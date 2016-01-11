@@ -6,5 +6,5 @@
  * Time: 10:45
  */
 
-$GLOBALS['TL_LANG']['tl_settings']['be_changelog_src'] = array('Quelle', 'Wo liegt die JSON-Datei welche angezeigt werden soll?');
-$GLOBALS['TL_LANG']['tl_settings']['be_changelog_legend'] = 'BE-Changelog';
+$GLOBALS['TL_LANG']['tl_settings']['be_rss_src'] = array('Quelle', 'Bitte geben Sie die URL des RSS-Feeds an.');
+$GLOBALS['TL_LANG']['tl_settings']['be_rss_legend'] = 'BE-RSS';
