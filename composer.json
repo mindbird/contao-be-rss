@@ -1,7 +1,6 @@
 {
   "name": "mindbird/contao-be-rss",
   "description": "Anzeigen eines RSS-Feeds auf der Backendstartseite",
-  "minimum-stability": "stable",
   "license": "proprietary",
   "keywords":["contao", "backend", "rss"],
   "type":"contao-module",
