@@ -1,4 +1,6 @@
 <div class="be_rss">
     <h2><?= $this->headline ?></h2>
-    <?= $this->content ?>
+    <div>
+        <?= $this->content ?>
+    </div>
 </div>

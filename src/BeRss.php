@@ -37,7 +37,7 @@ class BeRss extends \Backend
             }
         }
 
-        $template =  new \BackendTemplate('be_rss');
+        $template = new \BackendTemplate('be_rss');
         $template->headline = $GLOBALS['TL_CONFIG']['be_rss_headline'];
         $template->content = $output;
 
