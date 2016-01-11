@@ -24,7 +24,7 @@ class BeRss extends \Backend
             return '';
         }
 
-        $items = $feed->get_items(0,2);
+        $items = $feed->get_items(0, $GLOBALS['TL_CONFIG']['be_rss_src'] ? $GLOBALS['TL_CONFIG']['be_rss_src'] : 3);
         $output = '';
 
         if ($items) {
@@ -37,6 +37,10 @@ class BeRss extends \Backend
             }
         }
 
-        return $output;
+        $template =  new \BackendTemplate('be_rss');
+        $template->headline = $GLOBALS['TL_CONFIG']['be_rss_headline'];
+        $template->content = $output;
+
+        return $template->parse();
     }
 }
