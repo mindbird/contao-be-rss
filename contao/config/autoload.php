@@ -13,5 +13,5 @@
  */
 TemplateLoader::addFiles(array
 (
-	'be_rss_item'       => 'system/modules/be-changelog/templates',
+	'be_rss_item'       => 'system/modules/be-rss/templates',
 ));
