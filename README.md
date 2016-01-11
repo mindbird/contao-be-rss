@@ -1,1 +1,1 @@
-# contao-be-rss
+# contao-be-changelog
