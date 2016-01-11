@@ -29,12 +29,11 @@ class BeRss extends \Backend
 
         if ($items) {
             foreach ($items as $item) {
-                print 'Title: ' . $item->get_title() . '<br>';
-                print 'Link: ' . $item->get_link() . '<br>';
-                print 'Description: ' . $item->get_description() . '<br>';
-                print 'Image: ' . print_r($item->get_image_url(), true) . '<br>';
-
                 $template = new \BackendTemplate('be_rss_item');
+                $template->title = $item->get_title();
+                $template->link = $item->get_link();
+                $template->content = $item->get_content();
+                $output .= $template->parse();
             }
         }
 
