@@ -22,7 +22,7 @@ class BeRss extends \Backend
             return '';
         }
 
-        $items = $feed->get_items(0, ($GLOBALS['TL_CONFIG']['be_rss_src'] ? $GLOBALS['TL_CONFIG']['be_rss_src'] : 3));
+        $items = $feed->get_items(0, ($GLOBALS['TL_CONFIG']['be_rss_max'] ? $GLOBALS['TL_CONFIG']['be_rss_max'] : 3));
         $output = '';
 
         if ($items) {
