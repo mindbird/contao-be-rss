@@ -6,8 +6,6 @@ class BeRss extends \Backend
 {
     public function addSystemMessages()
     {
-        $objUser = \BackendUser::getInstance();
-
         if ($GLOBALS['TL_CONFIG']['be_rss_src'] == '') {
             return '';
         }
@@ -24,7 +22,7 @@ class BeRss extends \Backend
             return '';
         }
 
-        $items = $feed->get_items(0, $GLOBALS['TL_CONFIG']['be_rss_src'] ? $GLOBALS['TL_CONFIG']['be_rss_src'] : 3);
+        $items = $feed->get_items(0, ($GLOBALS['TL_CONFIG']['be_rss_src'] ? $GLOBALS['TL_CONFIG']['be_rss_src'] : 3));
         $output = '';
 
         if ($items) {
@@ -39,7 +37,7 @@ class BeRss extends \Backend
 
         $template = new \BackendTemplate('be_rss');
         $template->headline = $GLOBALS['TL_CONFIG']['be_rss_headline'];
-        $template->content = $output;
+        $template->items = $output;
 
         return $template->parse();
     }
