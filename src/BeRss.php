@@ -31,6 +31,7 @@ class BeRss extends \Backend
                 $template->title = $item->get_title();
                 $template->link = $item->get_link();
                 $template->content = $item->get_content();
+                $template->date = $item->get_date($GLOBALS['TL_CONFIG']['datimFormat']);
                 $output .= $template->parse();
             }
         }
