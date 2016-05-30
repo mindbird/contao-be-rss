@@ -26,12 +26,14 @@ class BeRss extends \Backend
         $output = '';
 
         if ($items) {
+            $user = \BackendUser::getInstance();
             foreach ($items as $item) {
                 $template = new \BackendTemplate('be_rss_item');
                 $template->title = $item->get_title();
                 $template->link = $item->get_link();
                 $template->content = $item->get_content();
                 $template->date = $item->get_date($GLOBALS['TL_CONFIG']['datimFormat']);
+                $template->class = $item->get_date('U') > $user->lastLogin ? 'new' : 'message';
                 $output .= $template->parse();
             }
         }
