@@ -11,7 +11,7 @@ class BeRss extends \Backend
         }
 
         $feed = new \SimplePie();
-        $feed->set_feed_url($GLOBALS['TL_CONFIG']['be_rss_src']);
+        $feed->set_feed_url(html_entity_decode($GLOBALS['TL_CONFIG']['be_rss_src']));
         $feed->set_output_encoding(\Config::get('characterSet'));
         $feed->set_cache_location(TL_ROOT . '/system/tmp');
         $feed->enable_cache(true);
